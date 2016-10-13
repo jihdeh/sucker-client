@@ -1,0 +1,57 @@
+{
+  "name": "sucker-client",
+  "version": "1.0.0",
+  "description": "Sucker Client",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jihdeh/sucker-client.git"
+  },
+  "keywords": [
+    "sucker",
+    "learning",
+    "killit"
+  ],
+  "author": "Jihdeh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jihdeh/sucker-client/issues"
+  },
+  "homepage": "https://github.com/jihdeh/sucker-client#readme",
+  "dependencies": {
+    "eslint-plugin-react": "^3.16.1",
+    "material-ui": "^0.16.0",
+    "react": "^15.3.2",
+    "react-router": "^2.8.1"
+  },
+  "devDependencies": {
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-regenerator": "^6.9.0",
+    "chai": "^3.0.0",
+    "chai-as-promised": "^5.1.0",
+    "eslint": "^1.9.0",
+    "eslint-loader": "^1.0.0",
+    "eslint-plugin-react": "^3.5.1",
+    "glob": "^5.0.14",
+    "istanbul": "^1.0.0-alpha.2",
+    "jscs": "^2.5.1",
+    "jscs-loader": "^0.2.0",
+    "jsdom": "^8.0.1",
+    "json-loader": "^0.5.2",
+    "mocha": "^2.5.3",
+    "mocha-jsdom": "^1.1.0",
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.4.1",
+    "postcss-cli": "^2.4.0",
+    "react-addons-test-utils": "^0.14.2",
+    "sinon": "^1.17.2",
+    "source-map-loader": "^0.1.5",
+    "source-map-support": "^0.3.2",
+    "supertest": "^1.0.1",
+    "supertest-as-promised": "^2.0.2",
+    "webpack": "^1.13.2"
+  }
+}
