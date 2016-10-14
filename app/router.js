@@ -2,10 +2,9 @@ import React from "react";
 import {Route, IndexRoute, Router, browserHistory} from "react-router";
 import App from "./app";
 import { connect } from "react-redux";
-import { changeFilter } from "./modules/Rework/rework-actions";
 
 
-// import HomeView from "./home-page";
+import HomeView from "./homepage/pages/landing-page";
 
 
 // import ErrorPage from "./static-pages/error-page";
@@ -29,9 +28,6 @@ const SuckerRouter = ({
     <Route path="/" component={App}>
       <IndexRoute
         component={HomeView}/>
-      <Route
-        path="/about-us"
-        component={About}/>
       <Route path="*" component={NoMatch} />
     </Route>
   </Router>

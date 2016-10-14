@@ -2,7 +2,7 @@ import React from "react";
 // import LoginActions from "./login/login-actions";
 // import LoginStore from "./login/login-store";
 // import {facebook} from "../config/login";
-import ThemeManager from 'material-ui/lib/styles/theme-manager';
+import getMuiTheme from "material-ui/styles/getMuiTheme";
 
 const injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
@@ -32,7 +32,7 @@ class App extends React.Component {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = '//connect.facebook.net/ar_AR/sdk.js';
+      js.src = '//connect.facebook.net/en_US/sdk.js';
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   }

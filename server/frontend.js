@@ -11,8 +11,12 @@ export default function Frontend() {
   const server = koa();
   const router = koaRouter();
 
+  router.get("/", function*() {
+      this.body = renderApp(this, "homepage", {});
+  });
+
   return server
-    .use(serve(path.join(__dirname, "../public")))
-    .use(staticCache({maxage: 60 * 1000})) // Cache all pages for 1 minute
+    .use(serve(path.join(__dirname, "../dist")))
+    .use(staticCache({ maxage: 60 * 1000 })) // Cache all pages for 1 minute
     .use(router.routes())
 }
