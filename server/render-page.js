@@ -15,7 +15,7 @@ export default function renderPage(title, appMarkup) {
 			</head>
 			<body>
 				<div id="myApp">${appMarkup || ""}</div>
-			  <script src="/dist/bundle.js"></script>
+			  <script src="/bundle.js"></script>
 			</body>
 		</html>`;
 }

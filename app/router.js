@@ -3,9 +3,7 @@ import {Route, IndexRoute, Router, browserHistory} from "react-router";
 import App from "./app";
 import { connect } from "react-redux";
 
-
 import HomeView from "./homepage/pages/landing-page";
-
 
 // import ErrorPage from "./static-pages/error-page";
 // import About from "./static-pages/about-us";
@@ -24,13 +22,13 @@ const SuckerRouter = ({
   history,
   dispatch
 }) => (
-  <Router history={ history }>
-    <Route path="/" component={App}>
-      <IndexRoute
-        component={HomeView}/>
-      <Route path="*" component={NoMatch} />
-    </Route>
-  </Router>
+	  <Router history={ history }>
+	    <Route path="/" component={App}>
+	      <IndexRoute
+	        component={HomeView}/>
+	      <Route path="*" component={NoMatch} />
+	    </Route>
+	  </Router>
 );
 
 export default connect()(SuckerRouter);

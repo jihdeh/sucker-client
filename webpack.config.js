@@ -6,7 +6,7 @@ const fs = require("fs");
 let devtool, loaders;
 if (process.env.NODE_ENV === "development") {
   loaders = ["react-hot-loader/webpack", "babel-loader", "babel"]
-  devtool = "eval";
+  devtool = "cheap-module-eval-source-map";
 } else {
   devtool = "cheap-module-source-map"
 }

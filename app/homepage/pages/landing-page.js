@@ -4,7 +4,6 @@ import setDisplayName from "recompose/setDisplayName";
 import setPropTypes from "recompose/setPropTypes";
 import onlyUpdateForPropTypes from "recompose/onlyUpdateForPropTypes";
 
-
 const enhance = compose(
 	setDisplayName("HomeView"),
 	onlyUpdateForPropTypes,
@@ -17,7 +16,7 @@ const HomeView = enhance(({
 	name = "Jihdeh"
 }) => (
 		<div>
-			<h2>Hello World, {name}</h2>
+			<h2>Hello Worlds, {name}</h2>
 		</div>
 	)
 );

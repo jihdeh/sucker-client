@@ -2,17 +2,11 @@ import React from "react";
 // import LoginActions from "./login/login-actions";
 // import LoginStore from "./login/login-store";
 // import {facebook} from "../config/login";
-import getMuiTheme from "material-ui/styles/getMuiTheme";
 
 const injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
 class App extends React.Component {
-  getChildContext() {
-    return {
-      muiTheme: getMuiTheme()
-    };
-  }
 
   componentDidMount() {
     // window.fbAsyncInit = () => {
@@ -45,7 +39,5 @@ class App extends React.Component {
     );
   }
 }
-App.childContextTypes = {
-  muiTheme: React.PropTypes.object
-};
+
 export default App;

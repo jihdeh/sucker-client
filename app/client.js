@@ -10,13 +10,11 @@ import { fromJS } from "immutable";
 import Iso from "iso";
 import {browserHistory} from "react-router";
 
-console.log("ehhehehhe");
 Iso.bootstrap((state, meta, node) => {
 	const store = configureStore(fromJS(state));
-	console.log(state, meta, node, "clientjs");
 	ReactDOM.render(
 		<Provider store={store}>
-			<SuckerRouter history={syncHistoryWithStore(createMemoryHistory(ctx.originalUrl), store, {
+			<SuckerRouter history={syncHistoryWithStore(browserHistory, store, {
 				selectLocationState: state => state.get("routing")
 			}) } />
 		</Provider>, node);
