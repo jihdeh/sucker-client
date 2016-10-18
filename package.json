@@ -5,10 +5,11 @@
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --ignore public -d 2 server/index  && npm run watch",
+    "dev": "nodemon --ignore public -d 2 server/index",
     "build": "echo Build mode: ${NODE_ENV:-develop} && rm -R -f dist && mkdir -p dist && npm run app",
     "app": "webpack",
-    "watch": "webpack --display-modules --progress --watch --display-error-details",
+    "watch:hash": "nodemon --watch dist",
+    "watch": "npm run watch:hash & webpack --display-modules --progress --watch --display-error-details",
     "style": "node-sass -E \"UTF-8\" style/index.s[ac]ss > dist/style.css && postcss --use autoprefixer dist/style.css -r",
     "style:prod": "node-sass -E \"UTF-8\" --output-style compressed style/index.s[ac]ss > dist/style.css && postcss --use autoprefixer dist/style.css -r"
 

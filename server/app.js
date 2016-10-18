@@ -8,9 +8,6 @@ import forward from "koa-forward-request";
 import Api from "./api";
 import Frontend from "./frontend";
 
-global.navigator = global.navigator || {};
-global.navigator.userAgent = global.navigator.userAgent || 'all';
-
 function App() {
   const app = koa();
 

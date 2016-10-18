@@ -2,9 +2,7 @@ import React from "react";
 import {Route, IndexRoute, Router, browserHistory} from "react-router";
 import App from "./app";
 import { connect } from "react-redux";
-
 import HomeView from "./homepage/pages/landing-page";
-
 // import ErrorPage from "./static-pages/error-page";
 // import About from "./static-pages/about-us";
 class NoMatch extends React.Component {
