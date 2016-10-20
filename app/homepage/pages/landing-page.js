@@ -1,24 +1,22 @@
-import React, {PropTypes} from "react";
+import React, {PropTypes, Component} from "react";
 import compose from "recompose/compose";
 import setDisplayName from "recompose/setDisplayName";
 import setPropTypes from "recompose/setPropTypes";
 import onlyUpdateForPropTypes from "recompose/onlyUpdateForPropTypes";
+import frontPage from "../../decorators/frontpage";
 
-const enhance = compose(
-	setDisplayName("HomeView"),
-	onlyUpdateForPropTypes,
-	setPropTypes({
-		name: PropTypes.string
-	})
-)
-
-const HomeView = enhance(({
-	name = "Jihdeh"
-}) => (
-		<div>
-			<h2>Hello Worlds, {name}</h2>
-		</div>
-	)
-);
+@frontPage()
+class HomeView extends Component {
+	constructor(props) {
+		super(props);
+	}
+	render() {
+		return (
+			<div>
+				<p>Hello Jihdeh</p>
+			</div>
+		)
+	}
+}
 
 export default HomeView;
