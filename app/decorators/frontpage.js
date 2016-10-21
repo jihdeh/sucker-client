@@ -13,11 +13,11 @@ export default function frontPage(
 			render() {
 				return (
 					<div>
-					<Navbar brand='logo' right>
-					  <NavItem href='get-started.html'>Getting started</NavItem>
-					  <NavItem href='components.html'>Components</NavItem>
-					</Navbar>
-					<Child />
+						<Navbar brand='logo' right>
+						  <NavItem href='get-started.html'>Getting started</NavItem>
+						  <NavItem href='components.html'>Components</NavItem>
+						</Navbar>
+						<Child {...this.props}/>
 					</div>
 				)
 			}

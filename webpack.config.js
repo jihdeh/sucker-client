@@ -1,6 +1,10 @@
 // webpack.config.js
 const webpack = require("webpack");
 const path = require("path");
+const fs = require("fs");
+
+const AssetsPlugin = require("assets-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 let devtool, loaders;
 if (process.env.NODE_ENV === "development") {
@@ -30,13 +34,24 @@ module.exports = {
       exclude: /node_modules/
     }]
   },
-  plugins: [
-    new webpack.NoErrorsPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      "process.env": {
-        "NODE_ENV": JSON.stringify("production")
-      }
-    })
-  ]
+  plugins: (process.env.NODE_ENV === "production" ? [
+		new webpack.optimize.DedupePlugin(),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: false
+			}
+		})
+	] : []).concat([
+		new CleanWebpackPlugin([path.join("dist", "js")]),
+		new webpack.optimize.LimitChunkCountPlugin({maxChunks: 2}),
+
+		// Emit a file with assets paths
+		// https://github.com/sporto/assets-webpack-plugin#options
+		new AssetsPlugin({
+			path: path.resolve(__dirname, "dist", "js"),
+			filename: "chunks.json",
+			processOutput: x => JSON.stringify(x)
+		}),
+		new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ar/)
+	])
 };

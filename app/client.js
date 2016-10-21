@@ -17,5 +17,5 @@ Iso.bootstrap((state, meta, node) => {
 			<SuckerRouter history={syncHistoryWithStore(browserHistory, store, {
 				selectLocationState: state => state.get("routing")
 			}) } />
-		</Provider>, node);
+		</Provider>, document.getElementById("root"));
 });
