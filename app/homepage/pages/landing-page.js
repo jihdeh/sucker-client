@@ -10,18 +10,10 @@ import {
 	getAllProducts
 } from "../homepage-actions";
 import Cards from "./cards";
-import {
-	get,
-	set,
-	deleteField,
-	toString,
-	getIn,
-	update,
-	reduce,
-} from "../../../util/functional-immutable";
+
 
 const mapStateToProps = (state, props) => ({
-	home: state.get("home"),
+	productList: state.get("productList"),
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -31,43 +23,21 @@ const mapDispatchToProps = dispatch => ({
 @frontPage()
 class HomeView extends Component {
 	static propTypes = {
-		home: IPropTypes.map
+		productList: IPropTypes.map
 	}
 
 	constructor(props) {
 		super(props);
 	}
 	render() {
-		const {home} = this.props;
-		console.log(home)
+		const {productList} = this.props;
 		return (
 			<div>
-				<Cards home />
-				<p>Hello Jihdeh</p>
+				<Cards productList={productList} />
 			</div>
 		)
 	}
 }
-// const enhance = compose(
-// 	setDisplayName("HomeView"),
-// 	onlyUpdateForPropTypes,
-// 	setPropTypes({
-// 		home: IPropTypes.map,
-// 	}),
-// 	connect(mapStateToProps)
-// );
 
-// const HomeView = enhance(({
-// 	home,
-
-// }) => {
-// 	console.log(home);
-// 	return (
-// 		<div>
-// 				<Cards home />
-// 				<p>Hello Jihdeh</p>
-// 			</div>
-// 	)
-// });
 
 export default connect(mapStateToProps)(HomeView);

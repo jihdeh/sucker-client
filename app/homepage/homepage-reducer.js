@@ -11,7 +11,6 @@ const initialState  = new Map();
 const HomepageReducer = (state = initialState, action) => {
 	switch(action.type) {
 		case FETCH_PRODUCTS:
-			console.log(action)
 			return set("items", action.items, state);
 		default:
 			return state;

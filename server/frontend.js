@@ -15,9 +15,17 @@ export default function Frontend() {
       this.body = renderApp(this, "homepage", {});
   });
 
+  router.get("/products", function*() {
+  	this.body = renderApp(this, "Products", {});
+  });
+
+  router.get("/product/:id", function*() {
+  	this.body = renderApp(this, "Product", {});
+  })
+
   return server
 		.use(serve(path.join(__dirname, "../static")))
     .use(serve(path.join(__dirname, "../dist")))
-    .use(router.routes())
+    .use(router.routes());
     // .use(staticCache({ maxage: 60 * 1000 })) // Cache all pages for 1 minute
 }

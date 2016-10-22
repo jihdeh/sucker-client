@@ -15,6 +15,7 @@ function App() {
   app
     .use(responseTime())
     .use(logger())
+    .use(mount("/api", Api()))
     .use(mount("/", Frontend()));
   return app;
 }

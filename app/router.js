@@ -5,8 +5,12 @@ import { connect } from "react-redux";
 import HomeView from "./homepage";
 import { getAllProducts } from "./homepage/homepage-actions";
 
+import ProductWrapper from "./product/routes/product-wrapper";
+import SingleProduct from "./product/components/single-product";
+
 // import ErrorPage from "./static-pages/error-page";
 // import About from "./static-pages/about-us";
+
 class NoMatch extends React.Component {
   render() {
     return (
@@ -28,7 +32,14 @@ const SuckerRouter = ({
 	        component={HomeView}
 	        onEnter={ () => dispatch(getAllProducts())}
 	        />
-	      <Route path="*" component={NoMatch} />
+	        <Route
+	        	path="product"
+	        	component={ProductWrapper}>
+	        <Route 
+	        	path=":id"
+	        	component={SingleProduct}/>
+	        </Route>
+		      <Route path="*" component={NoMatch} />
 	    </Route>
 	  </Router>
 );

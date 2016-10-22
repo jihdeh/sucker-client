@@ -1,7 +1,7 @@
 {
   "name": "sucker-client",
   "version": "1.0.0",
-  "description": "Sucker Client",
+  "description": "Reactjs simple ecommerce application backed with nodejs functional programming mongodb and more",
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,8 +14,8 @@
     "style:prod": "node-sass -E \"UTF-8\" --output-style compressed style/index.s[ac]ss > dist/style.css && postcss --use autoprefixer dist/style.css -r"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jihdeh/sucker-client.git"
+    "url": "git+https://github.com/jihdeh/sucker-client.git",
+    "type": "git"
   },
   "keywords": [
     "sucker",
@@ -31,7 +31,9 @@
   "dependencies": {
     "immutability-helper": "^2.0.0",
     "iso": "^5.2.0",
+    "joi": "^9.2.0",
     "koa": "^1.2.4",
+    "koa-bodyparser": "^2.2.0",
     "koa-cache-control": "^1.0.0",
     "koa-forward-request": "^0.7.1",
     "koa-logger": "^1.3.0",
@@ -40,7 +42,8 @@
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
     "koa-static-cache": "^3.1.7",
-    "node-sass": "^3.10.1",
+    "mongoose": "^4.6.4",
+    "ramda": "^0.22.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-immutable-proptypes": "^2.1.0",
@@ -49,8 +52,11 @@
     "react-router": "^2.8.1",
     "react-router-redux": "^4.0.6",
     "react-tap-event-plugin": "^1.0.0",
+    "recompose": "^0.20.2",
     "redux": "^3.6.0",
-    "redux-immutable": "^3.0.8"
+    "redux-immutable": "^3.0.8",
+    "winston": "^2.2.0",
+    "winston-mongodb": "^1.6.1"
   },
   "devDependencies": {
     "assets-webpack-plugin": "^3.4.0",
