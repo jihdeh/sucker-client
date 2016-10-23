@@ -24,7 +24,8 @@ function startMaster() {
 }
 
 function startWorker() {
-
+  mongoose.connect(mongoConnectionString);
+	
   const app = App();
   const port = process.env.PORT || 4450;
   app.listen(port);

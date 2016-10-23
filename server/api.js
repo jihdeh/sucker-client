@@ -1,13 +1,16 @@
-import mount from "koa-mount";
 import koa from "koa";
+import mount from "koa-mount";
 import cacheControl from "koa-cache-control";
-import {ProductApi} from "./routes";
+import apiErrorHandler from "../util/api-error-handler";
+import { ProductApi as productApi } from "./routes";
+
 
 export default function Api() {
   const api = koa();
-  api.use(mount("/v1/products", ProductApi));
-  api.use(function *terminator() {
-    return; // Do not continue past the API request handlers into the frontend request handlers
+  api.use(apiErrorHandler);
+  api.use(mount("/v1/product", productApi));
+  api.use(function* terminator() {
+    return;
   });
 
   return api;
