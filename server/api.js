@@ -8,7 +8,7 @@ import { ProductApi as productApi } from "./routes";
 export default function Api() {
   const api = koa();
   api.use(apiErrorHandler);
-  api.use(mount("/v1/product", productApi));
+  api.use(mount("/v1/products", productApi));
   api.use(function* terminator() {
     return;
   });

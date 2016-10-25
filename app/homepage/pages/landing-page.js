@@ -9,15 +9,11 @@ import frontPage from "../../decorators/frontpage";
 import {
 	getAllProducts
 } from "../homepage-actions";
-import Cards from "./cards";
+import Products from "../components/products-card";
 
 
 const mapStateToProps = (state, props) => ({
 	productList: state.get("productList"),
-});
-
-const mapDispatchToProps = dispatch => ({
-
 });
 
 @frontPage()
@@ -25,15 +21,11 @@ class HomeView extends Component {
 	static propTypes = {
 		productList: IPropTypes.map
 	}
-
-	constructor(props) {
-		super(props);
-	}
 	render() {
-		const {productList} = this.props;
+		const { productList } = this.props;
 		return (
 			<div>
-				<Cards productList={productList} />
+				<Products productList={productList} />
 			</div>
 		)
 	}

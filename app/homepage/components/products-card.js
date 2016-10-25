@@ -7,33 +7,23 @@ import setPropTypes from "recompose/setPropTypes";
 import onlyUpdateForPropTypes from "recompose/onlyUpdateForPropTypes";
 import { Map, toJS } from "immutable";
 import { Link } from "react-router";
-import {
-	get,
-	map,
-	set,
-	deleteField,
-	toString,
-	getIn,
-	reduce,
-	entrySeq
-} from "../../../util/functional-immutable";
 
 const enhance = compose(
-	setDisplayName("ProductCards"),
+	setDisplayName("Products"),
 	onlyUpdateForPropTypes,
 	setPropTypes({
 		productList: IPropTypes.map
 	})
 );
 
-const ProductCards = enhance(({
+const Products = enhance(({
 	productList = new Map()
 }) => {
 	const products = Object.assign({}, productList.toJS())
 	return  (
 		<div>
 			<Row>
-				{
+				{products.items &&
 					products.items.map((product, index) => 
 						<Col key={ index } s={1} m={2} l={3} className='grid-example'>
 				    	<Card header={<CardTitle reveal image={product.productImage} waves='light'/>}
@@ -58,4 +48,4 @@ const ProductCards = enhance(({
 	)
 });
 
-export default ProductCards;
+export default Products;
