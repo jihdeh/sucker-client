@@ -3,7 +3,10 @@ import {Route, IndexRoute, Router, browserHistory} from "react-router";
 import App from "./app";
 import { connect } from "react-redux";
 import HomeView from "./homepage";
-import { getAllProducts } from "./homepage/homepage-actions";
+import { 
+	getAllProducts,
+	getOneProduct
+} from "./homepage/homepage-actions";
 
 import ProductWrapper from "./product/routes/product-wrapper";
 import SingleProduct from "./product/components/single-product";
@@ -36,8 +39,9 @@ const SuckerRouter = ({
 	        	path="product"
 	        	component={ProductWrapper}>
 	        <Route 
-	        	path=":id"
-	        	component={SingleProduct}/>
+	        	path=":productId"
+	        	component={SingleProduct}
+	        	onEnter={ () => dispatch(getOneProduct(this))}/>
 	        </Route>
 		      <Route path="*" component={NoMatch} />
 	    </Route>

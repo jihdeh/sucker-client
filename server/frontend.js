@@ -19,7 +19,7 @@ export default function Frontend() {
   	this.body = renderApp(this, "Products", {});
   });
 
-  router.get("/product/:id", function*() {
+  router.get("/product/:productId", function*() {
   	this.body = renderApp(this, "Product", {});
   })
 

@@ -7,6 +7,7 @@ import setPropTypes from "recompose/setPropTypes";
 import onlyUpdateForPropTypes from "recompose/onlyUpdateForPropTypes";
 import { Map, toJS } from "immutable";
 import { Link } from "react-router";
+import ProductModal from "./product-modal";
 
 const enhance = compose(
 	setDisplayName("Products"),
@@ -25,18 +26,20 @@ const Products = enhance(({
 			<Row>
 				{products.items &&
 					products.items.map((product, index) => 
-						<Col key={ index } s={1} m={2} l={3} className='grid-example'>
-				    	<Card header={<CardTitle reveal image={product.productImage} waves='light'/>}
+						<Col key={ index } s={1} m={3} l={3} className="products-grid">
+				    	<Card header={<CardTitle reveal image={product.productImage} waves="light"/>}
 						    title={product.productName}
 						    reveal={
-						    	<p>
-						    		Here is some more information about this product that is only revealed once clicked on.
-							    	<Link to={"/product/" + product.productId}>Buy Now</Link>
-						    	</p>
+						    	<div>
+							    	<p>
+							    		Here is some more information about this product that is only revealed once clicked on.
+							    	</p>
+								    <ProductModal product={product} />
+							    </div>
 						    }>
 						    <p>
 						    	<a href="#">
-						    		{product.price} {product.currency}
+						    		$ {product.price}
 						    	</a>
 						    </p>
 							</Card>
