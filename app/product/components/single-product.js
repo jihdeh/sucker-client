@@ -5,8 +5,10 @@ import setPropTypes from "recompose/setPropTypes";
 import onlyUpdateForPropTypes from "recompose/onlyUpdateForPropTypes";
 import setDisplayName from "recompose/setDisplayName";
 import withHandlers from "recompose/withHandlers";
+import { connect } from "react-redux";
 
-const mapStateToProps = (state, props) => ({
+
+const mapStateToProps = (state, props)  => ({
 	productList: state.get("productList")
 });
 
@@ -25,7 +27,9 @@ const enhance = compose(
 const SingleProduct = enhance(({
 	productList = new Map()
 }) => {
-	console.log(productList);
+	const products = Object.assign({}, productList.toJS())
+
+	console.log(products, "aha")
 	return (
 		<div>
 			<h2>Hello</h2>
@@ -33,4 +37,4 @@ const SingleProduct = enhance(({
 	)
 });
 
-export default SingleProduct;
+export default connect(mapStateToProps)(SingleProduct);

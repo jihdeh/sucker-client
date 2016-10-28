@@ -40,8 +40,7 @@ const SuckerRouter = ({
 	        	component={ProductWrapper}>
 	        <Route 
 	        	path=":productId"
-	        	component={SingleProduct}
-	        	onEnter={ () => dispatch(getOneProduct(this))}/>
+	        	component={SingleProduct}/>
 	        </Route>
 		      <Route path="*" component={NoMatch} />
 	    </Route>
