@@ -27,12 +27,12 @@ const enhance = compose(
 const SingleProduct = enhance(({
 	productList = new Map()
 }) => {
-	const products = Object.assign({}, productList.toJS())
-
-	console.log(products, "aha")
+	const product = Object.assign({}, productList.toJS())
 	return (
 		<div>
-			<h2>Hello</h2>
+			{product && 
+				<h2>{product.productName}</h2>
+			}
 		</div>
 	)
 });
