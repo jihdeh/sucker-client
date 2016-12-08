@@ -1,7 +1,4 @@
 import React from "react";
-// import LoginActions from "./login/login-actions";
-// import LoginStore from "./login/login-store";
-// import {facebook} from "../config/login";
 
 const injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();

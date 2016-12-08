@@ -6,9 +6,6 @@ import setPropTypes from "recompose/setPropTypes";
 import { connect } from "react-redux";
 import onlyUpdateForPropTypes from "recompose/onlyUpdateForPropTypes";
 import frontPage from "../../decorators/frontpage";
-import {
-	getAllProducts
-} from "../homepage-actions";
 import Products from "../components/products-card";
 
 

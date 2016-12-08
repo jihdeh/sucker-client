@@ -1,5 +1,6 @@
 import React from "react";
-import {Card, CardTitle, Row, Col} from "react-materialize";
+// import {Card, CardTitle, Row, Col} from "react-materialize";
+import { Row, Col, Card } from 'antd';
 import IPropTypes from "react-immutable-proptypes";
 import compose from "recompose/compose";
 import setDisplayName from "recompose/setDisplayName";
@@ -21,28 +22,22 @@ const Products = enhance(({
 	productList = new Map()
 }) => {
 	const products = Object.assign({}, productList.toJS())
+	console.log(products)
 	return  (
 		<div>
 			<Row>
 				{products.items &&
 					products.items.map((product, index) => 
-						<Col key={ index } s={1} m={3} l={3} className="products-grid">
-				    	<Card header={<CardTitle reveal image={product.productImage} waves="light"/>}
-						    title={product.productName}
-						    reveal={
-						    	<div>
-							    	<p>
-							    		Here is some more information about this product that is only revealed once clicked on.
-							    	</p>
-								    <ProductModal product={product} />
-							    </div>
-						    }>
-						    <p>
-						    	<a href="#">
-						    		$ {product.price}
-						    	</a>
-						    </p>
-							</Card>
+						<Col key={ index } span={6} className="products-grid">
+				    	<Card style={{ width: 240 }} bodyStyle={{ padding: 0 }}>
+						    <div className="custom-image">
+						    	<img alt="example" width="100%" src={product.productImage} />
+						    </div>
+						    <div className="custom-card">
+						    	<p>{product.productName}</p>
+						    	<p>$ {product.price}</p>
+						    </div>
+						</Card>
 				    </Col>
 					)
 				}
