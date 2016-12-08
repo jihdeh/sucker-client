@@ -16,8 +16,6 @@ export default function renderPage(title, appMarkup, appSrc) {
 				<meta name="author" content="">
 				<title>${title || "Sucker"}</title>
 
-				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-				<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 				<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 				<link rel="stylesheet" href="${cachedStyleSrc}">
 			</head>
@@ -37,8 +35,6 @@ export default function renderPage(title, appMarkup, appSrc) {
 						window.onload = downloadJSAtOnload;
 					}
 				</script>
-				<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 			</body>
 		</html>`;
 }

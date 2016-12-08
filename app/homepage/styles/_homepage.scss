@@ -1,9 +1,45 @@
+.logo {
+    float: left;
+    height: 80px;
+    line-height: 80px;
+}
+
+.logo img {
+    height: 80px;
+    line-height: 80px;
+    width: 40px;
+    margin-right: 8px;
+}
+
+.logo span {
+    float: right;
+    font-size: 16px;
+    font-family: 'Raleway', 'Hiragino Sans GB', sans-serif;
+    height: 80px;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+
+
+.header {
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    height: 80px;
+    margin-bottom: 24px;
+    padding: 0 4%;
+    width: 100%;
+}
+
 .custom-image img {
-  display: block;
+    display: block;
 }
+
 .custom-card {
-  padding: 10px 16px;
+    padding: 10px 16px;
 }
+
 .custom-card p {
-  color: #999;
+    color: #999;
 }

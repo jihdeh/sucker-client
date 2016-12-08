@@ -1,6 +1,5 @@
 import React from "react";
-// import {Card, CardTitle, Row, Col} from "react-materialize";
-import { Row, Col, Card } from 'antd';
+import { Row, Col, Card } from "antd";
 import IPropTypes from "react-immutable-proptypes";
 import compose from "recompose/compose";
 import setDisplayName from "recompose/setDisplayName";
@@ -28,7 +27,7 @@ const Products = enhance(({
 			<Row>
 				{products.items &&
 					products.items.map((product, index) => 
-						<Col key={ index } span={6} className="products-grid">
+						<Col key={ index } xs={24} sm={12} md={6} lg={6} className="products-grid">
 				    	<Card style={{ width: 240 }} bodyStyle={{ padding: 0 }}>
 						    <div className="custom-image">
 						    	<img alt="example" width="100%" src={product.productImage} />

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import DefaultHeaderData from "../menu/default-menu-data";
-import {Navbar, NavItem} from "react-materialize";
+import { Row, Col, Card } from 'antd';
 
 export default function frontPage(
 		TopHeaderData = DefaultHeaderData
@@ -13,10 +13,16 @@ export default function frontPage(
 			render() {
 				return (
 					<div>
-						<Navbar brand='logo' right>
-						  <NavItem href='get-started.html'>Getting started</NavItem>
-						  <NavItem href='components.html'>Components</NavItem>
-						</Navbar>
+						<header className="header">
+							<Row>
+								<Col xs={24} sm={24} md={6} lg={4}>
+									<a className="logo" href="/">
+										<img alt="logo" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg"/>
+										<span>Sucker</span>
+									</a>
+								</Col>
+							</Row>
+						</header>
 						<Child {...this.props}/>
 					</div>
 				)
