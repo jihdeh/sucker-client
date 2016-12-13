@@ -15,15 +15,17 @@ export const fetchSingleProduct = (item) => ({
 });
 
 export const getAllProducts = () => async dispatch => {
-  try {
-    const response = await axios.get(`/api/v1/products`);
-    dispatch(fetchProducts(fromJS(response.data)));
-  } catch (error) {
-    console.trace(error);
-  }
+	if (typeof window == "undefined") return;
+	try {
+		const response = await axios.get(`/api/v1/products`);
+		dispatch(fetchProducts(fromJS(response.data)));
+	} catch (error) {
+		console.trace(error);
+	}
 };
 
 export const getOneProduct = (productId) => async dispatch => {
+	console.log("here one")
 	try {
 		const response = await axios.get(`/api/v1/products/${productId}`);
 		dispatch(fetchSingleProduct(fromJS(response.data)));
