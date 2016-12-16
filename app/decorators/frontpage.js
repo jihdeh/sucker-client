@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import DefaultHeaderData from "../menu/default-menu-data";
 import { Row, Col, Card } from 'antd';
 
+
 export default function frontPage(
 		TopHeaderData = DefaultHeaderData
 	) {
@@ -23,7 +24,7 @@ export default function frontPage(
 								</Col>
 							</Row>
 						</header>
-						<Child {...this.props}/>
+						{typeof window !== "undefined" && <Child {...this.props}/> }
 					</div>
 				)
 			}

@@ -5,6 +5,6 @@
     "transform-class-properties",
     "transform-regenerator",
     "add-module-exports",
-    ["import", [{ libraryName: "antd", style: "css" }]]
+    ["import", [{ libraryName: "antd", "libraryDirectory": "lib", "style": "css" }]]
   ]
 }

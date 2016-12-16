@@ -1,6 +1,5 @@
 import React, {Component} from "react"; 
 import frontPage from "../../decorators/frontpage";
-import {Preloader} from "react-materialize";
 
 @frontPage()
 class ProductWrapper extends Component {
@@ -13,7 +12,7 @@ class ProductWrapper extends Component {
 		}
 		return (
 			<div className="product-wrapper">
-				{typeof document === "undefined" ? <Preloader flashing size="big"/> : this.props.children }
+				{typeof document === "undefined" ? <div>...</div> : this.props.children }
 			</div>
 		)
 	}
