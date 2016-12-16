@@ -24,6 +24,9 @@ export default function frontPage(
 								</Col>
 							</Row>
 						</header>
+						<div className="banner">
+							<img src="/images/maxresdefault.png" />
+						</div>
 						{typeof window !== "undefined" && <Child {...this.props}/> }
 					</div>
 				)
