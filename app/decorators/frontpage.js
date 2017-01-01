@@ -27,7 +27,7 @@ export default function frontPage(
 						<div className="banner">
 							<img src="/images/maxresdefault.png" />
 						</div>
-						{typeof window !== "undefined" && <Child {...this.props}/> }
+						<Child {...this.props}/>
 					</div>
 				)
 			}
