@@ -4,28 +4,15 @@
     line-height: 80px;
     margin-left: 30px;
     color: #999;
-}
-
-.logo img {
-    height: 80px;
-    line-height: 80px;
-    width: 40px;
-    margin-right: 8px;
-}
-
-.logo .logo-text {
-    float: right;
-    /*font-size: 16px;*/
-    font-family: 'Cinzel', serif;
-    /*height: 80px;*/
-    /*line-height: 80px;*/
-    /*text-transform: uppercase;*/
-}
-
-.banner {
+    .logo-text {
+        float: right;
+        font-family: 'Cinzel', serif;
+    }
     img {
-        width: 100%;
-        height: 620px;
+        height: 80px;
+        line-height: 80px;
+        width: 40px;
+        margin-right: 8px;
     }
 }
 
@@ -34,9 +21,27 @@
     transition: opacity 0.5s;
     height: 80px;
     width: 100%;
-    background: /* gradient can be an image */ linear-gradient( to left, rgba(92,7,52,1) 0%, rgba(134,29,84,1) 12%, rgba(255,93,177,1) 47%, rgba(83,0,30,1) 100% ) left bottom #fff no-repeat;
+    background: /* gradient can be an image */
+    linear-gradient( to left, rgba(92, 7, 52, 1) 0%, rgba(134, 29, 84, 1) 12%, rgba(255, 93, 177, 1) 47%, rgba(83, 0, 30, 1) 100%) left bottom #fff no-repeat;
     background-size: 100% 5px;
 }
+
+.lg-nav-menu {
+    float: right;
+    margin-top: 15px;
+    border-bottom: none !important;
+    .lg-menu-item:hover {
+        border-bottom: none !important;
+        color: #cc4185 !important;
+    }
+    .lg-menu-item.ant-menu-item-selected {
+        border-bottom: none !important;
+        color: #cc4185 !important;
+    }
+}
+
+
+/*Product css MOVE away*/
 
 .custom-image img {
     display: block;
@@ -50,18 +55,19 @@
     color: #999;
 }
 
-
 .row-gutter {
     padding: 20px;
     .ant-row > div {
-      background: transparent;
-      border: 0;
+        background: transparent;
+        border: 0;
     }
 }
+
 .gutter-box {
-  background: #00A0E9;
-  padding: 5px 0;
+    background: #00A0E9;
+    padding: 5px 0;
 }
+
 .gutter-col {
     padding-bottom: 8px;
 }
