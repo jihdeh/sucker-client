@@ -2,16 +2,29 @@ import React, {Component} from "react";
 import DefaultHeaderData from "../menu/default-menu-data";
 import { Row, Col, Card, Menu, Icon, Dropdown } from 'antd';
 
+const SubMenu = Menu.SubMenu;
+const MenuItemGroup = Menu.ItemGroup;
+
 const menu = (
-  <Menu>
-    <Menu.Item key="0">
-      <a href="http://www.alipay.com/">1st menu item</a>
-    </Menu.Item>
-    <Menu.Item key="1">
-      <a href="http://www.taobao.com/">2nd menu item</a>
-    </Menu.Item>
-    <Menu.Divider />
-    <Menu.Item key="3">3d menu item</Menu.Item>
+    <Menu
+        mode="inline"
+        style={{ width: 240 }}
+      >
+    <Menu.Item key="home">HOME</Menu.Item>
+    <SubMenu key="products" title={<span>PRODUCTS</span>}>
+          <Menu.Item key="1">Accessories</Menu.Item>
+          <Menu.Item key="2">Hookahs</Menu.Item>
+        </SubMenu>
+
+        <SubMenu key="sub4" title={<span>SHOPPING</span>}>
+          <Menu.Item key="9">Shop</Menu.Item>
+          <Menu.Item key="10">Cart</Menu.Item>
+          <Menu.Item key="11">Checkout</Menu.Item>
+          <Menu.Item key="12">Account</Menu.Item>
+        </SubMenu>
+	    <Menu.Item key="about">ABOUT US</Menu.Item>
+	    <Menu.Item key="contact">CONTACT US</Menu.Item>
+
   </Menu>
 );
 
