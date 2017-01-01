@@ -2,6 +2,8 @@
     float: left;
     height: 80px;
     line-height: 80px;
+    margin-left: 30px;
+    color: #999;
 }
 
 .logo img {
@@ -11,13 +13,13 @@
     margin-right: 8px;
 }
 
-.logo span {
+.logo .logo-text {
     float: right;
-    font-size: 16px;
-    font-family: 'Raleway', 'Hiragino Sans GB', sans-serif;
-    height: 80px;
-    line-height: 80px;
-    text-transform: uppercase;
+    /*font-size: 16px;*/
+    font-family: 'Cinzel', serif;
+    /*height: 80px;*/
+    /*line-height: 80px;*/
+    /*text-transform: uppercase;*/
 }
 
 .banner {
@@ -30,11 +32,10 @@
 .header {
     -webkit-transition: opacity 0.5s;
     transition: opacity 0.5s;
-    background: #fff;
-    border-bottom: 1px solid #eee;
     height: 80px;
-    padding: 0 4%;
     width: 100%;
+    background: /* gradient can be an image */ linear-gradient( to left, rgba(92,7,52,1) 0%, rgba(134,29,84,1) 12%, rgba(255,93,177,1) 47%, rgba(83,0,30,1) 100% ) left bottom #fff no-repeat;
+    background-size: 100% 5px;
 }
 
 .custom-image img {

@@ -16,7 +16,7 @@ export default function renderPage(title, appMarkup, appSrc) {
 				<meta name="author" content="">
 				<title>${title || "Sucker"}</title>
 
-				<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+				<link href="https://fonts.googleapis.com/css?family=Slabo+27px|Cinzel" rel="stylesheet">
 				<link rel="stylesheet" href="${cachedStyleSrc}">
 			</head>
 			<body>

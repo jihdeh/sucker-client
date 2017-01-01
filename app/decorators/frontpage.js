@@ -18,15 +18,14 @@ export default function frontPage(
 							<Row>
 								<Col xs={24} sm={24} md={6} lg={4}>
 									<a className="logo" href="/">
-										<img alt="logo" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg"/>
-										<span>Sucker</span>
+										<img alt="logo" src="/images/deer.svg"/>
+										<p className="logo-text">
+											Clouded
+										</p>
 									</a>
 								</Col>
 							</Row>
 						</header>
-						<div className="banner">
-							<img src="/images/maxresdefault.png" />
-						</div>
 						<Child {...this.props}/>
 					</div>
 				)
