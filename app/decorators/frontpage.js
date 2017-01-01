@@ -1,9 +1,19 @@
 import React, {Component} from "react";
 import DefaultHeaderData from "../menu/default-menu-data";
-import { Row, Col, Card, Menu, Icon } from 'antd';
+import { Row, Col, Card, Menu, Icon, Dropdown } from 'antd';
 
-const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
+const menu = (
+  <Menu>
+    <Menu.Item key="0">
+      <a href="http://www.alipay.com/">1st menu item</a>
+    </Menu.Item>
+    <Menu.Item key="1">
+      <a href="http://www.taobao.com/">2nd menu item</a>
+    </Menu.Item>
+    <Menu.Divider />
+    <Menu.Item key="3">3d menu item</Menu.Item>
+  </Menu>
+);
 
 export default function frontPage(
 		TopHeaderData = DefaultHeaderData
@@ -41,6 +51,11 @@ export default function frontPage(
 							        		Account
 							        	</Menu.Item>
 							        </Menu>
+								</Col>
+								<Col xs={6} sm={8} md={0} lg={0} className="sm-nav-menu-col">
+									<Dropdown overlay={menu} trigger={['click']}>
+										<Icon type="bars" />
+									</Dropdown>
 								</Col>
 							</Row>
 						</header>
