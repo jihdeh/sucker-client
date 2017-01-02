@@ -27,6 +27,9 @@ export default function frontPage(
 								<NavMenu />
 							</Row>
 						</header>
+						<div className="banner">
+							<img src="/images/2-1800x705.jpg" />
+						</div>
 						<Child {...this.props}/>
 					</div>
 				)

@@ -23,24 +23,27 @@ const Products = enhance(({
 	const products = Object.assign({}, productList.toJS())
 	console.log(products)
 	return  (
-		<div className="row-gutter">
-			<Row gutter={16}>
-				{products.items &&
-					products.items.map((product, index) => 
-						<Col span={4} key={ index } xs={24} sm={12} md={6} lg={6} className="gutter-col">
-				    	<Card bodyStyle={{ padding: 0 }} className="gutter-box">
-						    <div className="custom-image">
-						    	<img alt="example" width="100%" src={product.productImage} />
-						    </div>
-						    <div className="custom-card">
-						    	<p>{product.productName}</p>
-						    	<p>$ {product.price}</p>
-						    </div>
-						</Card>
-				    </Col>
-					)
-				}
-			</Row>
+		<div>
+			<h3>FEATURED PRODUCTS</h3>
+			<div className="row-gutter">
+				<Row gutter={16}>
+					{products.items &&
+						products.items.map((product, index) => 
+							<Col span={4} key={ index } xs={24} sm={12} md={6} lg={6} className="gutter-col">
+					    	<Card bodyStyle={{ padding: 0 }} className="gutter-box">
+							    <div className="custom-image">
+							    	<img alt="example" width="100%" src={product.productImage} />
+							    </div>
+							    <div className="custom-card">
+							    	<p>{product.productName}</p>
+							    	<p>$ {product.price}</p>
+							    </div>
+							</Card>
+					    </Col>
+						)
+					}
+				</Row>
+			</div>
 		</div>
 	)
 });
