@@ -24,9 +24,11 @@ const Products = enhance(({
 	console.log(products)
 	return  (
 		<div>
-			<h3>FEATURED PRODUCTS</h3>
 			<div className="row-gutter">
 				<Row gutter={16}>
+					<div className="products-headline">
+						<h3>FEATURED PRODUCTS</h3>
+					</div>
 					{products.items &&
 						products.items.map((product, index) => 
 							<Col span={4} key={ index } xs={24} sm={12} md={6} lg={6} className="gutter-col">
