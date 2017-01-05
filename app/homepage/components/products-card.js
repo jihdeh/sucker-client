@@ -31,7 +31,7 @@ const Products = enhance(({
 					</div>
 					{products.items &&
 						products.items.map((product, index) => 
-							<Col span={4} key={ index } xs={24} sm={12} md={6} lg={6} className="gutter-col">
+							<Col span={4} key={ index } xs={12} sm={12} md={6} lg={6} className="gutter-col">
 					    	<Card bodyStyle={{ padding: 0 }} className="gutter-box">
 							    <div className="custom-image">
 							    	<img alt="example" width="100%" src={product.productImage} />

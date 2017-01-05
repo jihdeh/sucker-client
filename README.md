@@ -29,6 +29,8 @@ const HomeView = enhance(({
 
 export default HomeView;
 
+[![Screen Shot 2017-01-05 at 12.18.16 PM.png](https://s29.postimg.org/st0e3k3br/Screen_Shot_2017_01_05_at_12_18_16_PM.png)](https://postimg.org/image/9b5qnm6dv/)
+
 ```
 
 React and Tools used, which i believe is what every needs in a react project
