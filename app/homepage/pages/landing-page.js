@@ -22,6 +22,9 @@ class HomeView extends Component {
 		const { productList } = this.props;
 		return (
 			<div>
+				<div className="banner">
+					<img src="/images/2-1800x705.jpg" />
+				</div>
 				<Products productList={productList} />
 			</div>
 		)
