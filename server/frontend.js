@@ -20,23 +20,8 @@ export default function Frontend() {
     this.body = renderApp(this, "Products", {});
   });
 
-  router.get("/product/:productSku", function*(next) {
-    yield next;
-    try {
-      const product = yield Product.findOne({ sku: this.params.productSku }).lean().exec();
-      if (!product) {
-        this.status = 404;
-        this.body = renderError("Product does not exist");
-        return;
-      }
-      let data = {
-      	productList: product
-      }
-      this.body = renderApp(this, "Product", data);
-    } catch (error) {
-      //this.status = 500;
-			// this.body = renderError(error.message);
-    }
+  router.get("/product/:productSku", function*() {
+    this.body = renderApp(this, "Product", {});
   })
 
   return server

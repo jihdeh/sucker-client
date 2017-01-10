@@ -10,12 +10,8 @@ import { connect } from "react-redux";
 
 
 const mapStateToProps = (state, props)  => ({
-	productList: state.get("productList")
+	productList: state.get("productReducer")
 });
-
-// const loadProductDetail = props = () => {
-
-// }
 
 const enhance = compose(
 	setDisplayName("SingleProduct"),
@@ -36,12 +32,12 @@ const enhance = compose(
 const SingleProduct = enhance(({
 	productList = new Map()
 }) => {
-	const product = Object.assign({}, productList.toJS())
+	const product = Object.assign({}, productList.toJS());
 	return (
 		<div>
-			{product && 
-				<h2>{product.productName}</h2>
-			}
+			{product.item && product.item.map((item, i) => 
+				<h2 key={i}>{item.productName}</h2>
+			)}
 		</div>
 	)
 });
