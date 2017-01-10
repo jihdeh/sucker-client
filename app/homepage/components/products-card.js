@@ -21,7 +21,6 @@ const Products = enhance(({
 	productList = new Map()
 }) => {
 	const products = Object.assign({}, productList.toJS())
-	console.log(products)
 	return  (
 		<div>
 			<div className="row-gutter">
@@ -32,20 +31,20 @@ const Products = enhance(({
 					{products.items &&
 						products.items.map((product, index) => 
 							<Col span={4} key={ index } xs={12} sm={12} md={6} lg={6} className="gutter-col">
-							<Link to={`/product/${product.sku}`}>
-					    	<Card
-					    		bodyStyle={{ padding: 0 }}
-					    		className="gutter-box">
-							    <div className="custom-image">
-							    	<img alt="example" width="100%" src={product.productImage} />
-							    </div>
-							    <div className="custom-card">
-							    	<p>{product.productName}</p>
-							    	<p>$ {product.price}</p>
-							    </div>
-							</Card>
-							</Link>
-					    </Col>
+								<Link to={`/product/${product.sku}`}>
+							    	<Card
+							    		bodyStyle={{ padding: 0 }}
+							    		className="gutter-box">
+									    <div className="custom-image">
+									    	<img alt="example" width="100%" src={product.productImage} />
+									    </div>
+									    <div className="custom-card">
+									    	<p>{product.productName}</p>
+									    	<p>$ {product.price}</p>
+									    </div>
+									</Card>
+								</Link>
+					    	</Col>
 						)
 					}
 				</Row>
