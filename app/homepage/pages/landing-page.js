@@ -1,16 +1,12 @@
 import React, {PropTypes, Component} from "react";
-import compose from "recompose/compose";
 import IPropTypes from "react-immutable-proptypes";
-import setDisplayName from "recompose/setDisplayName";
-import setPropTypes from "recompose/setPropTypes";
 import { connect } from "react-redux";
-import onlyUpdateForPropTypes from "recompose/onlyUpdateForPropTypes";
 import frontPage from "../../decorators/frontpage";
 import Products from "../components/products-card";
 
 
 const mapStateToProps = (state, props) => ({
-	productList: state.get("productList"),
+	productList: state.get("homePageReducer"),
 });
 
 @frontPage()

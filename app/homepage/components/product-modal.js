@@ -3,7 +3,7 @@ import compose from "recompose/compose";
 import onlyUpdateForPropTypes from "recompose/onlyUpdateForPropTypes";
 import setDisplayName from "recompose/setDisplayName";
 import setPropTypes from "recompose/setPropTypes";
-import {Link} from "react-router";
+import { Link } from "react-router";
 
 
 const enhance = compose(

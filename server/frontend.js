@@ -20,10 +20,10 @@ export default function Frontend() {
     this.body = renderApp(this, "Products", {});
   });
 
-  router.get("/product/:productId", function*(next) {
+  router.get("/product/:productSku", function*(next) {
     yield next;
     try {
-      const product = yield Product.findOne({ productId: this.params.productId }).lean().exec();
+      const product = yield Product.findOne({ sku: this.params.productSku }).lean().exec();
       if (!product) {
         this.status = 404;
         this.body = renderError("Product does not exist");

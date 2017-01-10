@@ -10,7 +10,7 @@ const router = koaRouter();
 api.use(bodyParser());
 
 router.get("/", queryRoutes.getAll);
-router.get("/:productId", queryRoutes.getOne);
+router.get("/:productSku", queryRoutes.getOne);
 
 router.post("/", editRoutes.addNewProduct);
 
