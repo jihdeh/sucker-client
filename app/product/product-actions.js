@@ -11,7 +11,6 @@ export const fetchSingleProduct = (item) => ({
 
 
 export const getOneProduct = (productSku) => async dispatch => {
-	console.log("here one")
 	try {
 		const response = await axios.get(`/api/v1/products/${productSku}`);
 		dispatch(fetchSingleProduct(fromJS(response.data)));

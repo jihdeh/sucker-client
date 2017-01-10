@@ -7,7 +7,6 @@ import setPropTypes from "recompose/setPropTypes";
 import onlyUpdateForPropTypes from "recompose/onlyUpdateForPropTypes";
 import { Map, toJS } from "immutable";
 import { Link } from "react-router";
-import ProductModal from "./product-modal";
 
 const enhance = compose(
 	setDisplayName("Products"),
