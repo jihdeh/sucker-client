@@ -8,7 +8,7 @@ import setDisplayName from "recompose/setDisplayName";
 import withState from "recompose/withState";
 import withHandlers from "recompose/withHandlers";
 import { connect } from "react-redux";
-import { Row, Col, Input, Icon } from "antd";
+import { Row, Col, Input, Icon, Affix } from "antd";
 
 
 
@@ -61,12 +61,14 @@ const SingleProduct = enhance(({
 							onChange={onChangeSearchTerm}
 						/>
 					</div>
-					<div className="mobile-product-cart">
-						<p> 1 item(s) - $101.00 </p>
-						<span className="cart-container">
-							<Icon type="shopping-cart" />
-						</span>
-					</div>
+					<Affix>
+						<div className="mobile-product-cart">
+							<p> 1 item(s) - $101.00 </p>
+							<span className="cart-container">
+								<Icon type="shopping-cart" />
+							</span>
+						</div>
+					</Affix>
 				</Col>
 			</Row>
 			{product.item && product.item.map((item, i) => 
