@@ -28,14 +28,10 @@ const enhance = compose(
 	withState('searchTerm', 'onSearchTermEntered', ''),
 	withHandlers({
 		emitEmpty: props => (e) => {
-			console.log(this, props, e)
-			props.searchInputNode.focus();
 			props.onSearchTermEntered('');
-			// this.setState({ userName: '' });
 		},
 		onChangeSearchTerm: props => (e) => {
 			props.onSearchTermEntered(e.target.value);
-			// this.setState({ userName: e.target.value });
 		}
 	})
 );
@@ -63,7 +59,6 @@ const SingleProduct = enhance(({
 							suffix={suffix}
 							value={searchTerm}
 							onChange={onChangeSearchTerm}
-							ref={node => searchInputNode = node}
 						/>
 					</div>
 					<div className="mobile-product-cart">
