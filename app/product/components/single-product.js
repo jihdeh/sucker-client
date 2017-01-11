@@ -27,7 +27,8 @@ const enhance = compose(
 	}),
 	withState('searchTerm', 'onSearchTermEntered', ''),
 	withHandlers({
-		emitEmpty: props => () => {
+		emitEmpty: props => (e) => {
+			console.log(this, props, e)
 			props.searchInputNode.focus();
 			props.onSearchTermEntered('');
 			// this.setState({ userName: '' });

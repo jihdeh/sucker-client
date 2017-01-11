@@ -1,3 +1,14 @@
+*:focus {
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 .logo {
     float: left;
     height: 80px;
