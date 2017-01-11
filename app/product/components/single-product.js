@@ -50,7 +50,7 @@ const SingleProduct = enhance(({
 			<Row>
 				<Col xs={24} sm={24} md={0} lg={0} className="mobile-product-assets">
 					<div className="mobile-product-lead">
-						<p>Hello</p>
+						<img src="/images/shisha_base.jpg" />
 					</div>
 					<div className="mobile-product-search">
 						<Input
@@ -76,9 +76,11 @@ const SingleProduct = enhance(({
 						<Breadcrumb.Item href="">{product.item ? product.item[0].productName : '...'}</Breadcrumb.Item>
 					</Breadcrumb>
 				</div>
-				{product.item && product.item.map((item, i) => 
-					<h2 key={i}>{item.productName}</h2>
-				)}
+				<div className="product-subcontainer">
+					{product.item && product.item.map((item, i) => 
+						<h2 key={i}>{item.productName}</h2>
+					)}
+				</div>
 			</div>
 		</div>
 	)
