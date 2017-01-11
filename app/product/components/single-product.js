@@ -8,7 +8,7 @@ import setDisplayName from "recompose/setDisplayName";
 import withState from "recompose/withState";
 import withHandlers from "recompose/withHandlers";
 import { connect } from "react-redux";
-import { Row, Col, Input, Icon, Affix } from "antd";
+import { Row, Col, Input, Icon, Affix, Breadcrumb } from "antd";
 
 
 
@@ -69,9 +69,17 @@ const SingleProduct = enhance(({
 					</div>
 				</Col>
 			</Row>
-			{product.item && product.item.map((item, i) => 
-				<h2 key={i}>{item.productName}</h2>
-			)}
+			<div className="product-container">
+				<div className="product-breadcrumb">
+					<Breadcrumb separator=">">
+						<Breadcrumb.Item>Home</Breadcrumb.Item>
+						<Breadcrumb.Item href="">{product.item ? product.item[0].productName : '...'}</Breadcrumb.Item>
+					</Breadcrumb>
+				</div>
+				{product.item && product.item.map((item, i) => 
+					<h2 key={i}>{item.productName}</h2>
+				)}
+			</div>
 		</div>
 	)
 });
