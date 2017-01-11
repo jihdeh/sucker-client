@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/jihdeh/sucker-client#readme",
   "dependencies": {
-    "antd": "^2.5.1",
+    "antd": "^2.6.1",
     "axios": "^0.15.2",
     "babel-plugin-import": "^1.1.0",
     "css-loader": "^0.26.1",
