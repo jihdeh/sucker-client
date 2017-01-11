@@ -62,7 +62,8 @@ const SingleProduct = enhance(({
 						/>
 					</div>
 					<div className="mobile-product-cart">
-
+						<p> 1 item(s) - $101.00 </p>
+						<Icon type="cart" />
 					</div>
 				</Col>
 			</Row>
