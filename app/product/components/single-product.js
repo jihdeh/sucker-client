@@ -61,14 +61,12 @@ const SingleProduct = enhance(({
 							onChange={onChangeSearchTerm}
 						/>
 					</div>
-					<Affix>
-						<div className="mobile-product-cart">
-							<p> 1 item(s) - $101.00 </p>
-							<span className="cart-container">
-								<Icon type="shopping-cart" />
-							</span>
-						</div>
-					</Affix>
+					<div className="mobile-product-cart">
+						<p> 1 item(s) - $101.00 </p>
+						<span className="cart-container">
+							<Icon type="shopping-cart" />
+						</span>
+					</div>
 				</Col>
 			</Row>
 			{product.item && product.item.map((item, i) => 
