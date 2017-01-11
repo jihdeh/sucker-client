@@ -77,8 +77,11 @@ const SingleProduct = enhance(({
 					</Breadcrumb>
 				</div>
 				<div className="product-subcontainer">
-					{product.item && product.item.map((item, i) => 
-						<h2 key={i}>{item.productName}</h2>
+					{product.item && product.item.map((item, i) =>
+						<div className="product-headline">
+							<h2 key={i}>{item.productName}</h2>
+							<img src={item.productImage} />
+						</div>
 					)}
 				</div>
 			</div>
