@@ -85,7 +85,15 @@ const SingleProduct = enhance(({
 									<img src={item.productImage} />
 						    	</Col>
 						    	<Col span={2} xs={24} sm={12} md={12} lg={12} className="gutter-col">
-									<img src={item.productImage} />
+									<div className="product-moreinfo">
+										<div className="product-shipping-info">
+											<Icon type="rocket" />
+											<div>
+											<h3>FREE SHIPPING</h3>
+											<p>This product qualifies for free air shipping.</p>
+											</div>
+										</div>
+									</div>
 						    	</Col>
 							</Row>
 						</div>

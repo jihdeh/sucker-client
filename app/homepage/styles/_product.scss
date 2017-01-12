@@ -137,7 +137,23 @@
         padding: 20px;
         background-color: #fff;
         img {
-    	    width: 100%;
+            width: 100%;
         }
+    }
+}
+
+.product-shipping-info {
+    div {
+        display: inline-block;
+        margin: 0 10px;
+        vertical-align: middle;
+    }
+    i {
+        background-color: #df4c99;
+        padding: 17px;
+        border-radius: 50%;
+        color: #fff;
+        font-size: large;
+        font-weight: bolder;
     }
 }
