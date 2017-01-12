@@ -137,10 +137,11 @@
     }
     .product-shipping-info,
     .product-guarantee-info,
-    .product-section3-info {
+    .product-section3-info,
+    .product-amount-info {
         padding-bottom: 15px;
         border-bottom: 1px solid #e4e4e4;
-        div {
+        .sub-product-info {
             display: inline-block;
             margin: 0 10px;
             vertical-align: middle;
@@ -155,22 +156,30 @@
         }
     }
     .product-guarantee-info,
-    .product-section3-info	{
+    .product-section3-info {
         padding-top: 10px;
     }
     .product-section3-info {
-    	p:nth-child(1) {
-    		display: inline-block;
-    	}
-    	p:nth-child(2) {
-    		float: right;
-    		display: inline-block;
-    	}
+        p:nth-child(1) {
+            display: inline-block;
+        }
+        p:nth-child(2) {
+            float: right;
+            display: inline-block;
+        }
         .product-stock-available {
             color: rgb(51, 153, 101)
         }
         .product-stock-not-available {
             color: red;
+        }
+    }
+    .product-amount-info {
+        h1 {
+            font-weight: 400;
+            font-style: normal;
+            font-size: 35px;
+            text-transform: none;
         }
     }
 }

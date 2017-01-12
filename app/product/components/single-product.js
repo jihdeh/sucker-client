@@ -88,14 +88,14 @@ const SingleProduct = enhance(({
 									<div className="product-moreinfo">
 										<div className="product-shipping-info">
 											<Icon type="rocket" />
-											<div>
+											<div className="sub-product-info">
 												<h3>FREE SHIPPING</h3>
 												<p>This product qualifies for free air shipping.</p>
 											</div>
 										</div>
 										<div className="product-guarantee-info">
 											<Icon type="dingding" />
-											<div>
+											<div className="sub-product-info">
 												<h3>7 DAYS GUARANTEE</h3>
 												<p>This product comes with 7 days guarantee.</p>
 											</div>
@@ -112,10 +112,8 @@ const SingleProduct = enhance(({
 											</p>
 										</div>
 										<div className="product-amount-info">
-											<div>
-												<h1>&#x20A6; {item.price}</h1>
-												<p>This product comes with 7 days guarantee.</p>
-											</div>
+											<h1>&#x20A6; {item.price}</h1>
+											<p>Excluding Tax: &#x20A6;{item.price}.00</p>
 										</div>
 									</div>
 						    	</Col>
