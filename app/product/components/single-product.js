@@ -111,6 +111,12 @@ const SingleProduct = enhance(({
 												}
 											</p>
 										</div>
+										<div className="product-amount-info">
+											<div>
+												<h1>&#x20A6; {item.price}</h1>
+												<p>This product comes with 7 days guarantee.</p>
+											</div>
+										</div>
 									</div>
 						    	</Col>
 							</Row>

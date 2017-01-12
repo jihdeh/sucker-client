@@ -39,7 +39,7 @@ const Products = enhance(({
 									    </div>
 									    <div className="custom-card">
 									    	<p>{product.productName}</p>
-									    	<p>$ {product.price}</p>
+									    	<p>&#x20A6; {product.price}</p>
 									    </div>
 									</Card>
 								</Link>
