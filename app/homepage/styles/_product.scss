@@ -142,7 +142,9 @@
     }
 }
 
-.product-shipping-info {
+.product-shipping-info, .product-guarantee-info {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e4e4e4;
     div {
         display: inline-block;
         margin: 0 10px;
@@ -156,4 +158,8 @@
         font-size: large;
         font-weight: bolder;
     }
+}
+
+.product-guarantee-info {
+	padding-top: 10px;
 }

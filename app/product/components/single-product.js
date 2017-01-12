@@ -89,8 +89,15 @@ const SingleProduct = enhance(({
 										<div className="product-shipping-info">
 											<Icon type="rocket" />
 											<div>
-											<h3>FREE SHIPPING</h3>
-											<p>This product qualifies for free air shipping.</p>
+												<h3>FREE SHIPPING</h3>
+												<p>This product qualifies for free air shipping.</p>
+											</div>
+										</div>
+										<div className="product-guarantee-info">
+											<Icon type="dingding" />
+											<div>
+												<h3>7 DAYS GUARANTEE</h3>
+												<p>This product comes with 7 days guarantee.</p>
 											</div>
 										</div>
 									</div>

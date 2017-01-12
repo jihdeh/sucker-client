@@ -11,6 +11,7 @@ export const fetchSingleProduct = (item) => ({
 
 
 export const getOneProduct = (productSku) => async dispatch => {
+	if (typeof window == "undefined") return;
 	try {
 		const response = await axios.get(`/api/v1/products/${productSku}`);
 		dispatch(fetchSingleProduct(fromJS(response.data)));
