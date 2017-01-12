@@ -18,11 +18,6 @@
     }
 }
 
-.gutter-box {
-    background: #00A0E9;
-    padding: 5px 0;
-}
-
 .gutter-col {
     padding-bottom: 8px;
 }
@@ -140,26 +135,41 @@
             width: 100%;
         }
     }
-}
-
-.product-shipping-info, .product-guarantee-info {
-    padding-bottom: 15px;
-    border-bottom: 1px solid #e4e4e4;
-    div {
-        display: inline-block;
-        margin: 0 10px;
-        vertical-align: middle;
+    .product-shipping-info,
+    .product-guarantee-info {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e4e4e4;
+        div {
+            display: inline-block;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+        i {
+            background-color: #df4c99;
+            padding: 17px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: large;
+            font-weight: bolder;
+        }
     }
-    i {
-        background-color: #df4c99;
-        padding: 17px;
-        border-radius: 50%;
-        color: #fff;
-        font-size: large;
-        font-weight: bolder;
+    .product-guarantee-info,
+    .product-section3-info	{
+        padding-top: 10px;
     }
-}
-
-.product-guarantee-info {
-	padding-top: 10px;
+    .product-section3-info {
+    	p:nth-child(1) {
+    		display: inline-block;
+    	}
+    	p:nth-child(2) {
+    		float: right;
+    		display: inline-block;
+    	}
+        .product-stock-available {
+            color: rgb(51, 153, 101)
+        }
+        .product-stock-not-available {
+            color: red;
+        }
+    }
 }

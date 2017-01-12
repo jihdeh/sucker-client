@@ -101,10 +101,15 @@ const SingleProduct = enhance(({
 											</div>
 										</div>
 										<div className="product-section3-info">
-											<p>Brand: Awesome Brand</p>
-											<p>Sold: 30</p>
-											<p>Product Sku: {item.sku}</p>
-											<p>Availability: In Stock</p>
+											<p>Brand:&nbsp; Awesome Brand</p>
+											<p>Sold:&nbsp; 30</p>
+											<p>Product Sku:&nbsp; {item.sku}</p>
+											<p>Availability: 
+												{item.inStock ? 
+													<span className="product-stock-available">&nbsp; In Stock</span> : 
+													<span className="product-stock-not-available">&nbsp; Not In Stock</span>
+												}
+											</p>
 										</div>
 									</div>
 						    	</Col>
