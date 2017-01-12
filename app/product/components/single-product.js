@@ -115,6 +115,16 @@ const SingleProduct = enhance(({
 											<h1>&#x20A6; {item.price}</h1>
 											<p>Excluding Tax: &#x20A6;{item.price}.00</p>
 										</div>
+										<div className="product-variations">
+											<div className="product-size-variation">
+												<h3>Size</h3>
+												<ul className="size-variation-list">
+													<li>S</li>
+													<li>M</li>
+													<li>L</li>
+												</ul>
+											</div>
+										</div>
 									</div>
 						    	</Col>
 							</Row>
