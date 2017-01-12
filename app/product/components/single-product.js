@@ -80,7 +80,14 @@ const SingleProduct = enhance(({
 					{product.item && product.item.map((item, i) =>
 						<div className="product-headline">
 							<h2 key={i}>{item.productName}</h2>
-							<img src={item.productImage} />
+							<Row gutter={16}>
+								<Col span={2} xs={24} sm={12} md={12} lg={12} className="gutter-col">
+									<img src={item.productImage} />
+						    	</Col>
+						    	<Col span={2} xs={24} sm={12} md={12} lg={12} className="gutter-col">
+									<img src={item.productImage} />
+						    	</Col>
+							</Row>
 						</div>
 					)}
 				</div>
