@@ -12,6 +12,9 @@ const Product = new Schema({
   rating: Number,
   sold: Number,
   inStock: Boolean,
+  availableSizes: [String],
+  availableColors: [String],
+  tags: [String],
   comments: [{
   	user: {type: Schema.ObjectId, ref: "User", index: true},
   	comment: {type: String, index: true} 
