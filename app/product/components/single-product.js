@@ -100,6 +100,12 @@ const SingleProduct = enhance(({
 												<p>This product comes with 7 days guarantee.</p>
 											</div>
 										</div>
+										<div className="product-section3-info">
+											<p>Brand: Awesome Brand</p>
+											<p>Sold: 30</p>
+											<p>Product Sku: {item.sku}</p>
+											<p>Availability: In Stock</p>
+										</div>
 									</div>
 						    	</Col>
 							</Row>
