@@ -124,6 +124,7 @@
         border-bottom: 1px solid rgb(228, 228, 228);
         line-height: 40px;
         min-height: 40px;
+        margin-bottom: 10px;
     }
     .product-breadcrumb {
         box-shadow: inset 0 0 10px #e9e9e9;
@@ -134,5 +135,8 @@
     }
     .product-subcontainer {
         padding: 20px;
+        img {
+    	    width: 100%;
+        }
     }
 }
