@@ -124,6 +124,13 @@ const SingleProduct = enhance(({
 													<li>L</li>
 												</ul>
 											</div>
+											<div className="product-color-variation">
+												<h3>Color</h3>
+												<ul className="color-variation-list">
+													<li>.</li>
+													<li>.</li>
+												</ul>
+											</div>
 										</div>
 									</div>
 						    	</Col>
