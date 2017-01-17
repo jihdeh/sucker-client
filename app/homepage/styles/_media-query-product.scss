@@ -1,5 +1,18 @@
-@media screen and (min-width: 762px) {
+@media screen and (min-width: 768px) {
     .product-subcontainer {
         margin: 0 30px;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .product-add-to-cart {
+        text-align: center;
+    	div {
+		    width: 33%;
+    	}
+        div:nth-child(4) {
+	        margin-left: 0px !important;
+            width: 100%
+        }
     }
 }

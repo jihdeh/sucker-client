@@ -132,6 +132,12 @@ const SingleProduct = enhance(({
 												</ul>
 											</div>
 										</div>
+										<div className="product-add-to-cart">
+											<div><span>-</span></div>
+											<div><span>1</span></div>
+											<div><span>+</span></div>
+											<div><button type="button">ADD TO CART</button></div>
+										</div>
 									</div>
 						    	</Col>
 							</Row>
