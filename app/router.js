@@ -31,9 +31,9 @@ const SuckerRouter = ({
   dispatch,
   location
 }) => (
-	  <StaticRouter context={context} location={location}>
-	    <App />
-	  </StaticRouter>
+  <StaticRouter context={context} location={location}>
+    <App />
+  </StaticRouter>
 );
 
 export default connect()(SuckerRouter);

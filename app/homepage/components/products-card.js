@@ -6,7 +6,9 @@ import setDisplayName from "recompose/setDisplayName";
 import setPropTypes from "recompose/setPropTypes";
 import onlyUpdateForPropTypes from "recompose/onlyUpdateForPropTypes";
 import { Map, toJS } from "immutable";
-import { Link } from "react-router";
+import { Link, Route } from 'react-router-dom';
+import SingleProduct from "../../product/components/single-product";
+
 
 const enhance = compose(
 	setDisplayName("Products"),
@@ -17,7 +19,8 @@ const enhance = compose(
 );
 
 const Products = enhance(({
-	productList = new Map()
+	productList = new Map(),
+	match
 }) => {
 	const products = Object.assign({}, productList.toJS())
 	return  (
@@ -30,7 +33,7 @@ const Products = enhance(({
 					{products.items &&
 						products.items.map((product, index) => 
 							<Col span={4} key={ index } xs={12} sm={12} md={6} lg={6} className="gutter-col">
-								<Link to={`/product/${product.sku}`}>
+								<Link to={`${match.url}/${product.sku}`}>
 							    	<Card
 							    		bodyStyle={{ padding: 0 }}
 							    		className="gutter-box">
@@ -48,6 +51,7 @@ const Products = enhance(({
 					}
 				</Row>
 			</div>
+			<Route path={`${match.path}/:productSku`} render= {({match}) =>( <div> <h3> {match.params.name} </h3></div>)}/>
 		</div>
 	)
 });

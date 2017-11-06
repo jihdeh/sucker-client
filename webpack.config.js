@@ -23,8 +23,8 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "js/[id]-[chunkhash].js",
-    chunkFilename: "js/[id]-[chunkhash].js"
+    filename: "js/[id]-[hash].js",
+    chunkFilename: "js/[id]-[hash].js"
   },
   module: {
     preLoaders: [
@@ -48,6 +48,10 @@ module.exports = {
       ]
     }]
   },
+  devServer: {
+    contentBase: './dist',
+     hot: true
+  },
   plugins: (process.env.NODE_ENV === "production" ? [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
@@ -60,9 +64,11 @@ module.exports = {
     new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 15 }),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('production')
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
       }
     }),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     // Emit a file with assets paths
     // https://github.com/sporto/assets-webpack-plugin#options
     new AssetsPlugin({

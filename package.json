@@ -5,7 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "WEB_CONCURRENCY=1 nodemon --ignore dist -d 2 server/index.js & npm run watch",
+    "dev": "WEB_CONCURRENCY=1 NODE_ENV='development' nodemon --ignore dist -d 2 server/index.js & npm run watch",
     "build": "echo Build mode: ${NODE_ENV:-develop} && rm -R -f dist && mkdir -p dist && npm run app && npm run images && npm run style:prod && wait && ./tools/cachehash",
     "app": "webpack",
     "watch:hash": "nodemon --watch dist --exec ./tools/cachehash",
@@ -59,7 +59,7 @@
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.6",
     "react-tap-event-plugin": "^3.0.2",
-    "recompose": "^0.20.2",
+    "recompose": "^0.26.0",
     "redux": "^3.6.0",
     "redux-immutable": "^3.0.8",
     "redux-thunk": "^2.1.0",

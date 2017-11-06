@@ -3,6 +3,8 @@ import { Link, Route, Switch } from 'react-router-dom';
 import HomeView from "./homepage";
 import { getAllProducts } from "./homepage/homepage-actions";
 import { getOneProduct } from "./product/product-actions";
+import ProductWrapper from "./product/routes/product-wrapper";
+
 
 const injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
@@ -36,7 +38,14 @@ class App extends React.Component {
     return (
       <div id="app">
       <Switch>
-        <Route exact={true} path="/" component={HomeView}/>
+        <Route
+          exact={true}
+          path="/"
+          component={HomeView}
+        />
+        <Route
+          path="product"
+          component={ProductWrapper} />
       </Switch>
       </div>
     );
