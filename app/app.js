@@ -1,4 +1,8 @@
 import React from "react";
+import { Link, Route, Switch } from 'react-router-dom';
+import HomeView from "./homepage";
+import { getAllProducts } from "./homepage/homepage-actions";
+import { getOneProduct } from "./product/product-actions";
 
 const injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
@@ -27,13 +31,30 @@ class App extends React.Component {
     }(document, 'script', 'facebook-jssdk'));
   }
 
+        // {typeof window !== "undefined" && this.props.children}
   render() {
     return (
       <div id="app">
-        {typeof window !== "undefined" && this.props.children}
+      <Switch>
+        <Route exact={true} path="/" component={HomeView}/>
+      </Switch>
       </div>
     );
   }
 }
 
 export default App;
+
+// <IndexRoute
+//           component={HomeView}
+//           onEnter={ () => dispatch(getAllProducts())}
+//           />
+//           <Route
+//             path="product"
+//             component={ProductWrapper}>
+//           <Route 
+//             path=":productSku"
+//             onEnter={(nextstate) => dispatch(getOneProduct(nextstate.params.productSku))}
+//             component={SingleProduct}/>
+//           </Route>
+//           <Route path="*" component={NoMatch} />

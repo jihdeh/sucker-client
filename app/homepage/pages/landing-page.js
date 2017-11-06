@@ -1,4 +1,4 @@
-import React, {PropTypes, Component} from "react";
+import React, {Component} from "react";
 import IPropTypes from "react-immutable-proptypes";
 import { connect } from "react-redux";
 import frontPage from "../../decorators/frontpage";

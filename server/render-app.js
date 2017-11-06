@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import SuckerRouter from "../app/router";
-import {createMemoryHistory} from "react-router";
+import {createMemoryHistory} from "history";
 import { syncHistoryWithStore } from "react-router-redux";
 import renderPage from "./render-page";
 import fs from "fs";
@@ -15,7 +15,7 @@ export default function renderApp(ctx, title, data) {
 	const store = configureStore();
 	iso.add("<div id=\"root\">" + ReactDOMServer.renderToString(
 		<Provider store={ store }>
-			<SuckerRouter history={syncHistoryWithStore(createMemoryHistory(ctx.originalUrl), store, {
+			<SuckerRouter location={ctx.req.url} history={syncHistoryWithStore(createMemoryHistory(ctx.originalUrl), store, {
 				selectLocationState: state => state.get("routing")
 			}) } />
 		</Provider>

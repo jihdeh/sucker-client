@@ -1,5 +1,5 @@
 import React from "react";
-import {Route, IndexRoute, Router, browserHistory} from "react-router";
+import {Route, IndexRoute, Router, StaticRouter} from "react-router";
 import App from "./app";
 import { connect } from "react-redux";
 import HomeView from "./homepage";
@@ -24,27 +24,16 @@ class NoMatch extends React.Component {
   }
 }
 
+const context = {}
+
 const SuckerRouter = ({
   history,
-  dispatch
+  dispatch,
+  location
 }) => (
-	  <Router history={ history }>
-	    <Route path="/" component={App}>
-	      <IndexRoute
-	        component={HomeView}
-	        onEnter={ () => dispatch(getAllProducts())}
-	        />
-	        <Route
-	        	path="product"
-	        	component={ProductWrapper}>
-	        <Route 
-	        	path=":productSku"
-	        	onEnter={(nextstate) => dispatch(getOneProduct(nextstate.params.productSku))}
-	        	component={SingleProduct}/>
-	        </Route>
-		      <Route path="*" component={NoMatch} />
-	    </Route>
-	  </Router>
+	  <StaticRouter context={context} location={location}>
+	    <App />
+	  </StaticRouter>
 );
 
 export default connect()(SuckerRouter);

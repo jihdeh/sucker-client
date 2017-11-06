@@ -1,4 +1,5 @@
-import React, { PropTypes } from "react";
+import React from "react";
+import PropTypes from 'prop-types'
 import IPropTypes from "react-immutable-proptypes";
 import compose from "recompose/compose";
 import lifecycle from "recompose/lifecycle";
@@ -72,7 +73,7 @@ const SingleProduct = enhance(({
 			<div className="product-container">
 				<div className="product-breadcrumb">
 					<Breadcrumb separator=">">
-						<Breadcrumb.Item>Home</Breadcrumb.Item>
+						<Breadcrumb.Item href="/">Home</Breadcrumb.Item>
 						<Breadcrumb.Item href="">{product.item ? product.item[0].productName : '...'}</Breadcrumb.Item>
 					</Breadcrumb>
 				</div>
